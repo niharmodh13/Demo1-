@@ -1,6 +1,5 @@
 resource "aws_instance" "general-i" {
   instance_type ="${var.general_instance_type}"
-  count = "${var.general_instance_count}"
   ami = "${var.ami}"
   key_name = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.general-sg.id}"]
